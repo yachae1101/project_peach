@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:project_peach/widgets/palette.dart';
 
 class CustomLoginButton extends StatelessWidget {
   final String text;

@@ -15,23 +15,13 @@ class CustomProgressIndicator extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          StepProgressIndicator(
-            totalSteps: total,
-            customColor:(index) {
-              if (index % 2 == 0) {
-                return Palette.peachColor;
-              } else {
-                return Colors.white30;
-              }
-            },
-            padding: 6.0,
-          ),
-        ],
-      ),
+    return StepProgressIndicator(
+      totalSteps: total,
+      currentStep: index,
+      size:5,
+      padding: 0,
+      selectedColor: Palette.peachColor,
+      unselectedColor: Palette.lightGrey,
     );
   }
 }
